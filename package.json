@@ -2,7 +2,7 @@
   "name": "humid",
   "version": "0.1.0",
   "description": "",
-  "main": "steam-local.js",
+  "main": "humid.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
