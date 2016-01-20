@@ -14,7 +14,8 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha index.test.js -w",
+    "test": "mocha index.test.js",
+    "test:single": "mocha index.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
