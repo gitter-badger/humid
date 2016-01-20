@@ -1,15 +1,44 @@
 {
   "name": "humid",
-  "version": "0.1.0",
-  "description": "",
-  "main": "humid.js",
-  "author": "",
-  "license": "ISC",
+  "description": "Scans and manages local steam apps",
+  "main": "index.js",
+  "version": "0.0.0-semantically-released",
+  "author": "Simon W. Jackson",
+  "license": "MIT",
   "dependencies": {
     "bluebird": "^3.1.1",
     "lodash": "^4.0.0",
     "mv": "^2.1.1",
     "walk": "^2.3.9",
     "wrench": "^1.5.8"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "test": "mocha index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miniarray/humid.git"
+  },
+  "keywords": [
+    "steam",
+    "games"
+  ],
+  "bugs": {
+    "url": "https://github.com/miniarray/humid/issues"
+  },
+  "homepage": "https://github.com/miniarray/humid#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "commitizen": "^2.5.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "mocha": "^2.3.4",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }

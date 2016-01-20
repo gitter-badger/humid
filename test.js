@@ -1,4 +1,4 @@
-var steam = require('./humid');
+var steam = require('./index');
 var _ = require('lodash');
 var fs = require('fs');
 var Promise = require('bluebird');
@@ -63,8 +63,8 @@ var moveGame = item => {
 
 steam
     .find(libraries)
-    .tap(bytesFree.bind(null, moveTo))
-    .then(data => _.orderBy(data, ['size'], ['asc']))
-    .then(reduceToSize)
-    .mapSeries(moveGame)
+    // .tap(bytesFree.bind(null, moveTo))
+    // .then(data => _.orderBy(data, ['size'], ['asc']))
+    // .then(reduceToSize)
+    // .mapSeries(moveGame)
     .catch(console.log);
