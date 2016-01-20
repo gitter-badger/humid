@@ -5,13 +5,16 @@ cache:
     - node_modules
 notifications:
   email: false
+node_js:
+  - '4'
 before_install:
-  - npm install -g npm@^2.0.0
+  - npm i -g npm@^2.0.0
 before_script:
   - npm prune
-node_js:
-  - "4.1"
 after_success:
   - npm run semantic-release
+branches:
+  except:
+    - "/^v\\d+\\.\\d+\\.\\d+$/"
 script:
-  - npm run test:single
+- npm run test:single
