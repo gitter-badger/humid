@@ -1,0 +1,30 @@
+"AppState"
+{
+    "appid"        "326410"
+    "Universe"        "1"
+    "name"        "Windward"
+    "StateFlags"        "4"
+    "installdir"        "Windward"
+    "LastUpdated"        "1452633850"
+    "UpdateResult"        "0"
+    "SizeOnDisk"        "137835724"
+    "buildid"        "927748"
+    "LastOwner"        "76561198041190539"
+    "BytesToDownload"        "10238640"
+    "BytesDownloaded"        "10238640"
+    "AutoUpdateBehavior"        "0"
+    "AllowOtherDownloadsWhileRunning"        "0"
+    "UserConfig"
+    {
+        "language"        "english"
+    }
+    "MountedDepots"
+    {
+        "228983"        "8124929965194586177"
+        "326411"        "3278540222606327140"
+    }
+    "InstallScripts"
+    {
+        "0"        "_CommonRedist\\vcredist\\2010\\installscript.vdf"
+    }
+}
