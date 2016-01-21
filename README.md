@@ -17,5 +17,15 @@ npm install humid
 var humid = require('humid');
 humid.find('/path/to/steam/library')
     .then(res => console.log)
-// Prints out array of results
+
+// [ { id: 241600,
+//     name: 'Rogue Legacy',
+//     appPath: 'Rogue Legacy',
+//     size: 337208904,
+//     manifest: '/path/to/steam/library/steamapps/appmanifest_241600.acf' },
+//   { id: 326410,
+//     name: 'Windward',
+//     appPath: 'Windward',
+//     size: 137835724,
+//     manifest: '/path/to/steam/library/steamapps/appmanifest_326410.acf' } ]
 ```
