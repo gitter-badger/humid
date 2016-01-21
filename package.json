@@ -50,5 +50,5 @@
       "pre-commit": "npm run test:single && npm run check-coverage"
     }
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
