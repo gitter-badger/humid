@@ -1,53 +1,54 @@
 {
-    "name": "humid",
-    "description": "Scans and manages installed steam apps",
-    "main": "index.js",
-    "author": "Simon W. Jackson",
-    "license": "MIT",
-    "dependencies": {
-        "bluebird": "^3.1.1",
-        "lodash": "^4.0.0",
-        "mv": "^2.1.1",
-        "walk": "^2.3.9",
-        "wrench": "^1.5.8"
+  "name": "humid",
+  "description": "Scans and manages installed steam apps",
+  "main": "index.js",
+  "author": "Simon W. Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "lodash": "^4.0.0",
+    "mv": "^2.1.1",
+    "walk": "^2.3.9",
+    "wrench": "^1.5.8"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "check-coverage": "istanbul check-coverage --branches 0 --statements 0 --lines 0 --functions 100",
+    "report-coverage": "codecov",
+    "test": "mocha test/*.js -w -c",
+    "test:single": "istanbul cover _mocha -- -R spec",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miniArray/humid.git"
+  },
+  "keywords": [
+    "steam",
+    "games"
+  ],
+  "bugs": {
+    "url": "https://github.com/miniArray/humid/issues"
+  },
+  "homepage": "https://github.com/miniArray/humid#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "codecov": "^1.0.1",
+    "commitizen": "^2.5.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "ghooks": "^1.0.3",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
     },
-    "scripts": {
-        "commit": "git-cz",
-        "check-coverage": "istanbul check-coverage --branches 0 --statements 0 --lines 0 --functions 100",
-        "report-coverage": "codecov",
-        "test": "mocha test/*.js -w -c",
-        "test:single": "istanbul cover _mocha -- -R spec",
-        "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/miniArray/humid.git"
-    },
-    "keywords": [
-        "steam",
-        "games"
-    ],
-    "bugs": {
-        "url": "https://github.com/miniArray/humid/issues"
-    },
-    "homepage": "https://github.com/miniArray/humid#readme",
-    "devDependencies": {
-        "chai": "^3.4.1",
-        "chai-as-promised": "^5.2.0",
-        "codecov": "^1.0.1",
-        "commitizen": "^2.5.0",
-        "cz-conventional-changelog": "^1.1.5",
-        "ghooks": "^1.0.3",
-        "istanbul": "^0.4.2",
-        "mocha": "^2.3.4",
-        "semantic-release": "^4.3.5"
-    },
-    "config": {
-        "commitizen": {
-            "path": "node_modules/cz-conventional-changelog"
-        },
-        "ghooks": {
-            "pre-commit": "npm run test:single && npm run check-coverage"
-        }
+    "ghooks": {
+      "pre-commit": "npm run test:single && npm run check-coverage"
     }
+  },
+  "version": "0.1.0"
 }
